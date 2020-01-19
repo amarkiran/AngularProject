@@ -1,0 +1,38 @@
+<div class="main_container">
+  <h1>{{user}}</h1>
+<table mat-table [dataSource]="dataSource" matSort style="width: 100%"
+       (matSortChange)="sortData($event)">
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="full_name">
+    <th mat-header-cell *matHeaderCellDef>Repo Full Name</th>
+    <td mat-cell *matCellDef="let element"> {{element.full_name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="watchers">
+    <th mat-header-cell *matHeaderCellDef>Watchers Count</th>
+    <td mat-cell *matCellDef="let element"> {{element.watchers}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="forks">
+    <th mat-header-cell *matHeaderCellDef>Forks Count</th>
+    <td mat-cell *matCellDef="let element"> {{element.forks}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="open_issues_count">
+    <th mat-header-cell *matHeaderCellDef>Issues Count</th>
+    <td mat-cell *matCellDef="let element"> {{element.open_issues_count}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="default_branch">
+    <th mat-header-cell *matHeaderCellDef>Default Brach</th>
+    <td mat-cell *matCellDef="let element"> {{element.default_branch}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"  style="background-color: steelblue;"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</div>

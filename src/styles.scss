@@ -1,0 +1,359 @@
+/* You can add global styles to this file, and also import other style files */
+
+.mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 18px!important;
+  position: relative;
+  height: inherit;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple{
+  background-color:steelblue!important;;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label{
+  color:steelblue!important;
+}
+
+input:-webkit-autofill {
+  background-color: #fff !important;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  -khtml-box-shadow: 0 0 0px 1000px #fff inset;
+  -moz-box-shadow: 0 0 0px 1000px #fff inset;
+  -ms-box-shadow: 0 0 0px 1000px #fff inset;
+  -o-box-shadow: 0 0 0px 1000px #fff inset;
+  box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-text-fill-color: #0a0a0a !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
+  color:steelblue!important;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: steelblue!important;
+}
+
+.mat-cell, .mat-footer-cell {
+  color: #4a555c;
+}
+
+.mat-header-cell {
+  color: #fff;
+}
+
+.mat-header-cell {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.mat-steel-btn{
+  background-color: steelblue;
+  color: #fff;
+
+  &-disabled{
+    background-color: #749cbe;
+    color: #fff;
+  }
+}
+
+// .mat-checkbox {
+//   transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
+//   cursor: pointer;
+//   -webkit-tap-highlight-color: transparent;
+// }
+
+@import "./assets/bootstrap/scss/functions";
+@import "./assets/bootstrap/scss/variables";
+@import './assets/styles/variables';
+@import "./assets/compass-mixins/lib/compass";
+@import "./assets/compass-mixins/lib/animate";
+@import "./assets/bootstrap/scss/bootstrap";
+@import "./assets/fontawesome/fontawesome";
+@import "./assets/styles/fonts";
+@import "./assets/styles/functions";
+@import "./assets/styles/mixins/background";
+@import "./assets/styles/mixins/animation";
+@import "./assets/styles/mixins/badges";
+@import "./assets/styles/mixins/breadcrumbs";
+@import "./assets/styles/mixins/pagination";
+@import "./assets/styles/mixins/buttons";
+@import "./assets/styles/mixins/misc";
+@import "./assets/styles/mixins/color-functions";
+@import "./assets/styles/mixins/cards";
+@import "./assets/styles/mixins/tooltips";
+@import "./assets/styles/mixins/popovers";
+@import "./assets/styles/mixins/blockqoute";
+@import "./assets/styles/accordions";
+// @import "./assets/styles/breadcrumbs";
+// @import "./assets/styles/forms";
+// @import "./assets/styles/icons";
+// @import "./assets/styles/tables";
+@import "./assets/styles/buttons";
+// @import "./assets/styles/badges";
+@import "./assets/styles/cards";
+@import "./assets/styles/typography";
+// @import "./assets/styles/preview";
+// @import "./assets/styles/lists";
+@import "./assets/styles/bootstrap-progress";
+// @import "./assets/styles/bootstrap-alerts";
+// @import "./assets/styles/tabs";
+// @import "./assets/styles/dropdowns";
+// @import "./assets/styles/pagination";
+// @import "./assets/styles/popovers";
+@import "./assets/styles/modals";
+@import "./assets/styles/nav";
+@import "./assets/styles/reset";
+// @import "./assets/styles/rating";
+@import "./assets/styles/layouts";
+@import "./assets/styles/tooltips";
+@import "./assets/styles/misc";
+@import "./assets/styles/utilities";
+// @import "./assets/styles/demo";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-expansion-panel-body {
+  padding: 0 !important;
+  clear: both;
+}
+
+.sidebar {
+    min-height: calc(100vh - #{$navbar-height});
+    background: $sidebar-light-bg;
+    font-family: $type-2;
+    padding: 0;
+    width: $sidebar-width-lg-hover;
+    z-index: 11;
+    transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+    -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+    -moz-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+    -ms-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+
+    mat-expansion-indicator{
+      display: none!important;
+    }
+
+    .mat-content{
+      overflow: inherit!important;
+    }
+
+    // span.link-titl{
+    //   display: none;
+    // }
+
+    span.mat-expansion-indicator.ng-tns-c4-1.ng-trigger.ng-trigger-indicatorRotate.ng-star-inserted{
+      display: none;
+      background-color: unset;
+    }
+
+    &:hover{
+        width: $sidebar-width-lg;
+
+        .nav .nav-item .nav-link .menu-title {
+            color: inherit;
+            display: inline-block;
+            font-size: $sidebar-menu-font-size;
+            line-height: 1;
+            vertical-align: middle;
+          }
+    }
+    .nav {
+      overflow: hidden;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      .nav-item {
+        .collapse {
+          z-index: 999;
+        }
+        fa-icon{
+            font-size: 0.875rem!important;
+        }
+        .collapse.show,
+        .collapsing {
+          background: $sidebar-light-menu-active-bg;
+        }
+        .nav-link {
+          align-items: center;
+          display: flex;
+          padding: $sidebar-menu-padding;
+          white-space: nowrap;
+          height: $nav-link-height;
+          color: $sidebar-light-menu-color;
+          i {
+            &.menu-arrow {
+              margin-left: auto;
+              margin-right: 0;
+              @include transition-duration(0.2s);
+              @include transition-property(transform);
+              @include transition-timing-function(ease-in);
+              &:before {
+                content: "\F142";
+                font-family: "Material Design Icons";
+                font-size: 18px;
+                line-height: 1;
+                font-style: normal;
+                vertical-align: middle;
+                color: rgba($sidebar-light-menu-color, 0.5);
+              }
+            }
+          }
+          &[aria-expanded="true"] {
+            background: $sidebar-light-menu-active-bg;
+            i {
+              &.menu-arrow {
+                @include transform(rotate(90deg));
+              }
+            }
+          }
+          .menu-icon {
+            // margin-right: 1.25rem;
+            padding-right: 2.25rem;
+            width: $sidebar-icon-size;
+            line-height: 1;
+            font-size: 18px;
+            color: lighten($sidebar-light-menu-icon-color, 30%);
+            .rtl & {
+              margin-right: 0;
+              margin-left: 1.25rem;
+            }
+          }
+          .menu-title {
+            color: inherit;
+            display: inline-block;
+            font-size: $sidebar-menu-font-size;
+            line-height: 1;
+            vertical-align: middle;
+            display: none;
+          }
+          .badge {
+            margin-left: auto;
+          }
+          &:hover {
+            color: darken($sidebar-light-menu-color, 5%);
+          }
+          &.active {
+            color: $sidebar-light-menu-active-color;
+            .menu-title,
+            i {
+              color: inherit;
+            }
+          }
+        }
+        &.nav-profile {
+          .nav-link {
+            @include display-flex;
+            @include flex-direction(column);
+            height: auto;
+            .user-wrapper {
+              @include display-flex;
+              margin-bottom: 30px;
+              .profile-image {
+                width: 40px;
+                height: 40px;
+                img {
+                  @include border-radius(100%);
+                  max-width: 100%;
+                }
+              }
+              .text-wrapper {
+                margin-left: 15px;
+                .rtl & {
+                  margin-left: 0;
+                  margin-right: 15px;
+                }
+                .profile-name {
+                  font-weight: 500;
+                  margin-bottom: 8px;
+                }
+                .designation {
+                  margin-right: 3px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &:not(.sub-menu) {
+        >.nav-item {
+          &:hover {
+            &:not(.nav-profile) {
+              >.nav-link {
+                background: $sidebar-light-menu-hover-bg;
+                color: $sidebar-light-menu-hover-color;
+              }
+            }
+            fa-icon,.menu-title{
+              color: #fff!important;
+            }
+            fa-icon{
+                font-size: 0.875rem !important;
+            }
+          }
+        }
+      }
+      &.sub-menu {
+        margin-bottom: 0;
+        padding: $sidebar-submenu-padding;
+        .nav-item {
+          .nav-link {
+            color: $sidebar-light-submenu-color;
+            padding: $sidebar-submenu-item-padding;
+            font-size: $sidebar-submenu-font-size;
+            line-height: 1;
+            height: auto;
+            &.active {
+              color: $sidebar-light-menu-active-color;
+              background: transparent;
+              &:before {
+                background: $sidebar-light-menu-active-color;
+              }
+            }
+          }
+          &:hover {
+            >.nav-link {
+              background: $sidebar-light-submenu-hover-bg;
+              color: $sidebar-light-submenu-hover-color;
+              &:before {
+                background: $sidebar-light-submenu-hover-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* style for off-canvas menu*/
+  
+  @media screen and (max-width: 991px) {
+    .sidebar-offcanvas {
+      position: fixed;
+      max-height: calc(100vh - #{$navbar-height});
+      top: $navbar-height;
+      bottom: 0;
+      overflow: auto;
+      right: -$sidebar-width-lg;
+      -webkit-transition: all 0.25s ease-out;
+      -o-transition: all 0.25s ease-out;
+      transition: all 0.25s ease-out;
+      &.active {
+        right: 0;
+      }
+    }
+  }
+
+  
+  .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #4682b4!important;
+}  
+
+app-sidebar{
+    border-right: 1px solid #dbe8f2;
+}

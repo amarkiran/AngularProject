@@ -1,0 +1,38 @@
+<div class="pt-3 pb-2" style="float: right; margin-bottom: 5px">
+  <input class="form-controller mr-2" type="text" placeholder="Search.." (keyup)="applyFilter($event)">
+</div>
+
+<table mat-table [dataSource]="dataValue" matSort style="width: 100%">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>User Id</th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="login">
+    <th mat-header-cell *matHeaderCellDef>User Name</th>
+    <td mat-cell *matCellDef="let element" (click)="userInfo(element)"  class="text-linkable"> {{element.login}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef> LastName</th>
+    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="site_admin">
+    <th mat-header-cell *matHeaderCellDef>Site Admin</th>
+    <td mat-cell *matCellDef="let element"> {{element.site_admin}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="repos_url">
+    <th mat-header-cell *matHeaderCellDef>Repo Url</th>
+    <td mat-cell *matCellDef="let element"> {{element.repos_url}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="url">
+    <th mat-header-cell *matHeaderCellDef>Url</th>
+    <td mat-cell *matCellDef="let element"> {{element.url}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"  style="background-color: steelblue;"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<router-outlet></router-outlet>

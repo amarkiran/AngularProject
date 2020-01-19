@@ -1,0 +1,7 @@
+{
+  "activeEnv": "Dev",
+  "nodeConfig": {
+    "baseurl" : "https://api.github.com"
+  },
+  "apilist":[]
+}

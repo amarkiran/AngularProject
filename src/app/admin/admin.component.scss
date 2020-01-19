@@ -1,0 +1,21 @@
+a:hover,a:active{
+    color:#0289c1 !important;
+    text-decoration: none;
+}
+a{text-decoration: none;};
+
+
+.cdk-focused,.cdk-mouse-focused,mat-tab-label-active{
+    color:#0289c1 !important;
+}
+
+.actroute{
+    color:#0289c1 !important;
+}
+.breadcrumb{
+  background-color: #80808052 !important;
+  font-size: medium !important;
+}
+.breadcrumb-item,.active{
+  font-size: large;
+}
